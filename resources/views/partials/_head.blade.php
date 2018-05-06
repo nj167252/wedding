@@ -6,8 +6,8 @@
 <title>@yield('title') Justmarriedjames</title>
 
 <!-- Bootstrap -->
-<link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/styles.css" rel="stylesheet">
+<link href="http://localhost:8000/css/bootstrap.css" rel="stylesheet">
+<link href="http://localhost:8000/css/styles.css" rel="stylesheet">
 
 
 

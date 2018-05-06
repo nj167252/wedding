@@ -84,6 +84,7 @@
                   <h3>Event 1</h3>
                 </div>
                 <div class="event-body">
+                  <label>3 Aug 2018</label>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>
                 </div>
@@ -94,6 +95,7 @@
                     <h3>Event 2</h3>
                   </div>
                   <div class="event-body">
+                    <label>3 Aug 2018</label>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                 </div>
@@ -104,6 +106,7 @@
                     <h3>Event 3</h3>
                   </div>
                   <div class="event-body">
+                    <label>3 Aug 2018</label>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                   </div>
                 </div>
@@ -114,6 +117,7 @@
                   <h3>Event 4</h3>
                 </div>
                 <div class="event-body">
+                  <label>3 Aug 2018</label>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>
               </div>

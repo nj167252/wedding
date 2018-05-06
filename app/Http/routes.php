@@ -17,4 +17,6 @@ Route::get('/gallery', 'PagesController@getGallery');
 Route::get('/party', 'PagesController@getParty');
 Route::get('/', 'PagesController@getIndex');
 
+Route::resource('events', 'EventController');
+
 

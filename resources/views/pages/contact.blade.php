@@ -27,7 +27,7 @@
 					<textarea type="text" id="message" name="message" class="form-control" rows="5" placeholder="Write your message here..."></textarea>
 				</div>
 				<div class="form-group flex-md-8">
-					<button type="submit" class="btn btn-md btn-block btn-primary"><i class="fa fa-paper-plane" aria-hidden="true"></i> Send</button>
+					<button type="submit" class="btn btn-lg btn-block btn-primary"><i class="fa fa-paper-plane" aria-hidden="true"></i> Send</button>
 				</div>
 			</form>
 		</div>

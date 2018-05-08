@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
+use App\Event;
 
 class EventController extends Controller
 {
@@ -36,7 +36,24 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Validate data
+        $this->validate($request, [
+            'title' => 'required|max:50',
+            'date' => 'required',
+            'body' => 'required|min:10|max:400'
+        ]);
+
+        // Store data
+        $event = new Event;
+
+        $event->title = $request->title;
+        $event->date = $request->date;
+        $event->body = $request->body;
+
+        $event->save();
+
+        // Redirect
+        return redirect()->route('events.show', $event->id);
     }
 
     /**

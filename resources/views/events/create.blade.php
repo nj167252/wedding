@@ -9,7 +9,7 @@
 		<div class="col-md-12">
 			<h1>Create New Event</h1>
 			<p class="text-content">Use the form below to create a new event. All events will be displayed to everyone on the home page.</p>
-			<form action="{{ url('event') }}" method="POST" class="d-flex flex-column align-items-center">
+			<form action="{{ url('events') }}" method="POST" class="d-flex flex-column align-items-center">
 
 				{{ csrf_field() }}
 
@@ -20,10 +20,6 @@
 				<div class="form-group flex-md-8">
 					<label for="date">Date:</label>
 					<input type="date" id="date" name="date" class="form-control" placeholder="" required />
-				</div>
-				<div class="form-group flex-md-8">
-					<label for="time">Time:</label>
-					<input type="time" id="time" name="time" class="form-control" placeholder="" required />
 				</div>
 				<div class="form-group flex-md-8">
 					<label for="body">Body:</label>

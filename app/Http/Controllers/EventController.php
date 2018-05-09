@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Event;
+use Session;
 
 class EventController extends Controller
 {
@@ -52,6 +53,8 @@ class EventController extends Controller
 
         $event->save();
 
+        Session::flash('success', 'A new Event was successfully saved!');
+
         // Redirect
         return redirect()->route('events.show', $event->id);
     }
@@ -64,7 +67,9 @@ class EventController extends Controller
      */
     public function show($id)
     {
-        //
+        $event = Event::find($id);
+
+        return view('events.show')->withEvent($event);
     }
 
     /**

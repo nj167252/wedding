@@ -1,6 +1,6 @@
 @extends('main')
 
-@section('title', 'Create Event |')
+@section('title', 'Show Event |')
 
 @section('content')
 
@@ -25,11 +25,16 @@
 				<p><strong>Updated at : </strong>{{ date('M j, Y H:i', strtotime($event->updated_at)) }}</p>
 				<hr>
 				<div class="row">
-					<div class="col-sm-6">
+					<div class="col-xs-6">
 						<a href="{{ route('events.edit', $event->id) }}" class="btn btn-primary btn-block">Edit</a>
 					</div>
-					<div class="col-sm-6">
+					<div class="col-xs-6">
 						<a href="{{ route('events.destroy', $event->id) }}" class="btn btn-danger btn-block">Delete</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<a href="{{ route('events.index') }}" class="btn btn-default btn-block" style="margin-top: 10px">Back</a>
 					</div>
 				</div>
 			</div>

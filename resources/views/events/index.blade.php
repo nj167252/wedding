@@ -33,7 +33,7 @@
 					<tr>
 						<th>{{ $event->id }}</th>
 						<td>{{ $event->title }}</td>
-						<td>{{ date('M j, Y H:i', strtotime($event->date)) }}</td>
+						<td>{{ date('M j, Y', strtotime($event->date)) }}</td>
 						<td>{{ substr($event->body, 0, 50) }}{{ strlen($event->body) > 50 ? " ..." : "" }}</td>
 						<td>
 							<a href="{{ route('events.show', $event->id) }}" class="btn btn-primary btn-xs">View</a>

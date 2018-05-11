@@ -82,7 +82,9 @@ class EventController extends Controller
      */
     public function edit($id)
     {
-        //
+        $event = Event::find($id);
+
+        return view('events.edit')->withEvent($event);
     }
 
     /**
@@ -94,7 +96,26 @@ class EventController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // Validate data
+        $this->validate($request, [
+            'title' => 'required|max:50',
+            'date' => 'required',
+            'body' => 'required|min:10|max:400'
+        ]);
+
+        // Store data
+        $event = Event::find($id);
+
+        $event->title = $request->input('title');
+        $event->date = $request->input('date');
+        $event->body = $request->input('body');
+
+        $event->save();
+
+        Session::flash('success', 'A new Event was successfully updated!');
+
+        // Redirect
+        return redirect()->route('events.show', $event->id);
     }
 
     /**

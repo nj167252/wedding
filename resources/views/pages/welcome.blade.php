@@ -78,49 +78,21 @@
         <div class="itinerary">
           <div class="itinerary-line"></div>
           <div class="itinerary-event-container">
+
+            @foreach($events as $event)
             <div class="itinerary-event">
               <div class="event">
                 <div class="event-title">
-                  <h3>Event 1</h3>
+                  <h3>{{ $event->title }}</h3>
                 </div>
                 <div class="event-body">
-                  <label>3 Aug 2018</label>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  <label>{{ date('M j, Y H:i', strtotime($event->date)) }}</label>
+                  <p>{{ $event->body }}</p>
                 </div>
                 </div>
               </div>
-              <div class="itinerary-event">
-                <div class="event">
-                  <div class="event-title">
-                    <h3>Event 2</h3>
-                  </div>
-                  <div class="event-body">
-                    <label>3 Aug 2018</label>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>
-                </div>
-              </div>
-              <div class="itinerary-event">
-                <div class="event">
-                  <div class="event-title">
-                    <h3>Event 3</h3>
-                  </div>
-                  <div class="event-body">
-                    <label>3 Aug 2018</label>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                  </div>
-                </div>
-              </div>
-            <div class="itinerary-event">
-              <div class="event">
-                <div class="event-title">
-                  <h3>Event 4</h3>
-                </div>
-                <div class="event-body">
-                  <label>3 Aug 2018</label>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-              </div>
+              @endforeach
+
             </div>
           </div>
         </div>

@@ -2,13 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
+
+use App\Http\Requests;
+use App\Event;
+use Session;
+use Mail;
+
 class PagesController extends Controller
 {
 
 	public function getIndex()
 	{
 
-		return view('pages.welcome');
+		$events = Event::orderBy('date', 'desc')->get();
+        
+    return view('pages.welcome')->withEvents($events);
 
 	}
 

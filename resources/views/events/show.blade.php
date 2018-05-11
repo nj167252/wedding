@@ -34,7 +34,7 @@
 				</div>
 				<div class="row">
 					<div class="col-xs-12">
-						<a href="{{ route('events.index') }}" class="btn btn-default btn-block" style="margin-top: 10px">Back</a>
+						<a href="{{ route('events.index') }}" class="btn btn-default btn-block" style="margin-top: 10px">List</a>
 					</div>
 				</div>
 			</div>

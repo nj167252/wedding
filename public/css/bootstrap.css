@@ -2,7 +2,6 @@
  * The file of Bootstrap has been customized for the justmarriedjames website
  * Below is a list of all classes that have been altered:
    * .navbar border radius was cancelled
-   * .navbar border-bottom was cancelled
  */
 
 
@@ -4175,7 +4174,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar {
   position: relative;
   min-height: 50px;
-  /*margin-bottom: 20px;*/
+  margin-bottom: 20px;
   border: 1px solid transparent;
 }
 /*@media (min-width: 768px) {

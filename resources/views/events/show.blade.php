@@ -29,7 +29,16 @@
 						<a href="{{ route('events.edit', $event->id) }}" class="btn btn-primary btn-block">Edit</a>
 					</div>
 					<div class="col-xs-6">
-						<a href="{{ route('events.destroy', $event->id) }}" class="btn btn-danger btn-block">Delete</a>
+
+						<form action="{{ route('events.destroy', $event->id) }}" method="POST">
+
+							{{ method_field('DELETE') }}
+						  {{ csrf_field() }}
+
+						<input type="submit" class="btn btn-danger btn-block" value="Delete">
+
+					</form>
+
 					</div>
 				</div>
 				<div class="row">

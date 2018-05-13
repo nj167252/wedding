@@ -9,7 +9,7 @@
 .landing {
 	background-color: #808080;
 	height: calc(100vh - 50px);
-	min-height: 400px
+	min-height: 400px;
 }
 
 .d-flex {

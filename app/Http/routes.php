@@ -19,4 +19,6 @@ Route::get('/', 'PagesController@getIndex');
 
 Route::resource('events', 'EventController');
 
+Route::resource('profiles', 'ProfileController');
+
 

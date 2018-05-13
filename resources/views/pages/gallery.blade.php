@@ -1,6 +1,6 @@
 @extends('main')
 
-@section('title', 'Wedding Party |')
+@section('title', 'Gallery |')
 
 @section('content')
 
@@ -8,16 +8,6 @@
 	<div class="row">
 		<div class="col-md-12 d-flex justify-content-between align-items-center">
     	<h1>Gallery</h1>
-			<div class="dropdown">
-			  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-			    Settings
-			    <span class="caret"></span>
-			  </button>
-			  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
-			    <li><a href="manage_gallery.html">Manage Photos</a></li>
-			    <li><a href="login.html">Login</a></li>
-			  </ul>
-			</div>
 		</div>
   </div>
   <div class="row">

@@ -15,6 +15,7 @@
             <div class="profile">
               
             </div>
+            <p class="lead text-center" style="margin-top:20px">Names</p>
             <p class="text-content text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             <div class="d-flex justify-content-between">
               <p>Sarah Symmonds</p>

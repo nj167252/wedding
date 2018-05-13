@@ -1,6 +1,6 @@
 @extends('main')
 
-@section('title', 'Wedding Party |')
+@section('title', 'Contact |')
 
 @section('content')
 

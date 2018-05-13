@@ -14,11 +14,23 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav navbar-right">
-	        <li class="{{ Request::is('/') ? "active" : "" }}"><a href="/">Home</a></li>
 	        <li class="{{ Request::is('party') ? "active" : "" }}"><a href="/party">Wedding Party</a></li>
 	        <li class="{{ Request::is('gallery') ? "active" : "" }}"><a href="/gallery">Gallery</a></li>
 	        <li class="{{ Request::is('location') ? "active" : "" }}"><a href="/location">Location</a></li>
 	        <li class="{{ Request::is('contact') ? "active" : "" }}"><a href="/contact">Contact</a></li>
+
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User <span class="caret"></span></a>
+	          <ul class="dropdown-menu">
+	            <li><a href="{{ route('events.index') }}">Manage Events</a></li>
+	            <li><a href="{{ route('profiles.index') }}">Manage Profiles</a></li>
+	            <li role="separator" class="divider"></li>
+	            <li><a href="{{ route('events.index') }}">Login</a></li>
+	            <li role="separator" class="divider"></li>
+	            <li><a href="{{ route('events.index') }}">Register</a></li>
+	          </ul>
+	        </li>
+
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->

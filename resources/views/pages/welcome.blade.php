@@ -1,6 +1,7 @@
 @extends('main')
 
 @section('content')
+
   <section class="cover landing">
     <div class="container-fluid">
 

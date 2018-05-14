@@ -1,7 +1,7 @@
 vendor/
 node_modules/
 npm-debug.log
-public/storage
+public/images
 public/hot
 storage/*.key
 .env.*.php

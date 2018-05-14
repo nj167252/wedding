@@ -7,12 +7,10 @@
 <section class="container">
 	<div class="row">
 
-		<div class="col-md-8">
-			<div class="profile">
-				{{ $profile->image }}
-			</div>
-			<p class="lead text-center" style="margin-top:20px">{{ $profile->name }}</p>
-			<p class="text-content text-center">{{ $profile->bio }}</p>
+		<div class="col-md-8 d-flex flex-column align-items-center" style="margin-top: 20px">
+			<img class="profile" src="{{ asset('images/' . $profile->image) }}" />
+			<p class="lead" style="margin-top:20px">{{ $profile->name }}</p>
+			<p class="text-content">{{ $profile->bio }}</p>
 		</div>
 
 		<div class="col-md-4">

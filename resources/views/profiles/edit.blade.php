@@ -10,22 +10,27 @@
 		<div class="col-md-8">
 			<h1>Edit Profile</h1>
 			<p class="text-content">Use the form below to edit a profile. Remember all profiles will be displayed to everyone on the Wedding Party page.</p>
-			<form action="{{ url('profiles', $profile->id) }}" method="POST">
+			<form action="{{ url('profiles', $profile->id) }}" method="POST" enctype="multipart/form-data">
 
 				{{ method_field('PUT') }}
 				{{ csrf_field() }}
 
-				<div class="form-group">
-					<label for="profile">Name:</label>
-					<input type="text" id="profile" name="profile" class="form-control" placeholder="Pool Party" value="{{ $profile->profile }}" required />
+				<div class="d-flex flex-column align-items-center">
+					<img class="profile" src="{{ asset('images/' . $profile->image) }}" />
 				</div>
+
 				<div class="form-group">
-					<label for="image">Image:</label>
-					<input type="text" id="image" name="image" class="form-control" placeholder="" value="{{ $profile->image }}" required />
+					<label for="name">Name:</label>
+					<input type="text" id="name" name="name" class="form-control" placeholder="Derik Jimes" value="{{ $profile->name }}" required />
+				</div>
+				<div class="form-group flex-md-8">
+					<label for="image">Profile Picture:</label>
+					<input type="file" id="image" name="image" class="" />
+					<p class="help-block">Upload a profile picture. Make sure it is 500px by 500px.</p>
 				</div>
 				<div class="form-group">
 					<label for="bio">Bio:</label>
-					<textarea type="text" id="bio" name="bio" class="form-control" rows="5" placeholder="What is the event about...">{{ $profile->bio }}</textarea>
+					<textarea type="text" id="bio" name="bio" class="form-control" rows="5" placeholder="Give me a worthy description..">{{ $profile->bio }}</textarea>
 				</div>
 			</div>
 

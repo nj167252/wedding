@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Profile;
+use Session;
+use Image;
+use Storage;
 
 class ProfileController extends Controller
 {
@@ -41,7 +45,7 @@ class ProfileController extends Controller
         // Validate data
         $this->validate($request, [
             'name' => 'required|max:50',
-            'image' => 'required',
+            'image' => 'required|image',
             'bio' => 'required|min:10|max:500'
         ]);
 
@@ -49,8 +53,21 @@ class ProfileController extends Controller
         $profile = new Profile;
 
         $profile->name = $request->name;
-        $profile->image = $request->image;
+        // $profile->image = $request->image;
         $profile->bio = $request->bio;
+
+        // Store our image
+        if($request->hasFile('image')) {
+
+            //Add photo
+            $image = $request->file('image');
+            $filename = time() . '.' . $image->getClientOriginalExtension();
+            $location = public_path('images/' .  $filename);
+
+            Image::make($image)->resize(500, 500)->save($location);
+
+            $profile->image = $filename;
+        }
 
         $profile->save();
 
@@ -98,7 +115,7 @@ class ProfileController extends Controller
         // Validate data
         $this->validate($request, [
             'name' => 'required|max:50',
-            'image' => 'required',
+            'image' => 'sometimes',
             'bio' => 'required|min:10|max:500'
         ]);
 
@@ -106,8 +123,25 @@ class ProfileController extends Controller
         $profile = Profile::find($id);
 
         $profile->name = $request->input('name');
-        $profile->image = $request->input('image');
+        // $profile->image = $request->input('image');
         $profile->bio = $request->input('bio');
+
+        // Store our image
+        if($request->hasFile('image')) {
+
+            // Add new photo
+            $image = $request->file('image');
+            $filename = time() . '.' . $image->getClientOriginalExtension();
+            $location = public_path('images/' .  $filename);
+            Image::make($image)->resize(500, 500)->save($location);
+            $oldFilename = $profile->image;
+
+            // Update the database
+            $profile->image = $filename;
+
+            // Delet old image
+            Storage::delete($oldFilename);
+        }
 
         $profile->save();
 
@@ -126,6 +160,7 @@ class ProfileController extends Controller
     public function destroy($id)
     {
         $profile = Profile::find($id);
+        Storage::delete($profile->image);
         
         $profile->delete();
         

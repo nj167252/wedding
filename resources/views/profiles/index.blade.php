@@ -32,7 +32,7 @@
 
 					@foreach($profiles as $profile)
 					<tr>
-						<th>{{ $prfile->id }}</th>
+						<th>{{ $profile->id }}</th>
 						<td>{{ $profile->name }}</td>
 						<td>{{ $profile->image }}</td>
 						<td>{{ $profile->bio }}</td>

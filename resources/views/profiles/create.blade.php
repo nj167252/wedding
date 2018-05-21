@@ -14,13 +14,21 @@
 				{{ csrf_field() }}
 
 				<div class="form-group flex-md-8">
+					<label for="image">Profile Picture:</label>
+					<input type="file" id="image" name="image" class="" placeholder="" required />
+					<p class="help-block">Upload a profile picture. Make sure it is 500px by 500px.</p>
+				</div>
+				<div class="form-group flex-md-8">
 					<label for="name">Name:</label>
 					<input type="text" id="name" name="name" class="form-control" placeholder="Derek Jimes" required />
 				</div>
 				<div class="form-group flex-md-8">
-					<label for="image">Profile Picture:</label>
-					<input type="file" id="image" name="image" class="" placeholder="" required />
-					<p class="help-block">Upload a profile picture. Make sure it is 500px by 500px.</p>
+					<label for="party">Wedding Party:</label>
+					<select id="party" name="party" class="form-control">
+						<option>Select Party</option>
+						<option value="Bridesmaid">Bridesmaid</option>
+						<option value="Groomsman">Groomsman</option>
+					</select>
 				</div>
 				<div class="form-group flex-md-8">
 					<label for="bio">Bio:</label>

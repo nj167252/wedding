@@ -19,14 +19,22 @@
 					<img class="profile" src="{{ asset('images/' . $profile->image) }}" />
 				</div>
 
+				<div class="form-group flex-md-8">
+					<label for="image">Profile Picture:</label>
+					<input type="file" id="image" name="image" class="" />
+					<p class="help-block">Upload a profile picture. Make sure it is 500px by 500px.</p>
+				</div>
 				<div class="form-group">
 					<label for="name">Name:</label>
 					<input type="text" id="name" name="name" class="form-control" placeholder="Derik Jimes" value="{{ $profile->name }}" required />
 				</div>
 				<div class="form-group flex-md-8">
-					<label for="image">Profile Picture:</label>
-					<input type="file" id="image" name="image" class="" />
-					<p class="help-block">Upload a profile picture. Make sure it is 500px by 500px.</p>
+					<label for="party">Wedding Party:</label>
+					<select id="party" name="party" class="form-control">
+						<option>Select Party</option>
+						<option value="Bridesmaid" {{ $profile->party == "Bridesmaid" ? "selected" : "" }}>Bridesmaid</option>
+						<option value="Groomsman" {{ $profile->party == "Groomsman" ? "selected" : "" }}>Groomsman</option>
+					</select>
 				</div>
 				<div class="form-group">
 					<label for="bio">Bio:</label>

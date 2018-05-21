@@ -24,9 +24,10 @@
 				<thead>
 					<th>#</th>
 					<th>Name</th>
+					<th>Wedding Party</th>
 					<th>Image</th>
 					<th>Bio</th>
-					<th></th>
+					<th style="width: 100px;"></th>
 				</thead>
 				<tbody>
 
@@ -34,6 +35,7 @@
 					<tr>
 						<th>{{ $profile->id }}</th>
 						<td>{{ $profile->name }}</td>
+						<td>{{ $profile->party }}</td>
 						<td>{{ $profile->image }}</td>
 						<td>{{ $profile->bio }}</td>
 						<td>

@@ -25,7 +25,9 @@ class PagesController extends Controller
 	public function getParty()
 	{
 
-		return view('pages.party');
+		$profiles = Profile::orderBy('name', 'asc')->get();
+
+		return view('pages.party')->withProfiles($profiles);
 		
 	}
 

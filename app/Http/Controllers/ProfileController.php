@@ -45,15 +45,16 @@ class ProfileController extends Controller
         // Validate data
         $this->validate($request, [
             'name' => 'required|max:50',
-            'image' => 'required|image',
-            'bio' => 'required|min:10|max:500'
+            'party' => 'required|max:50',
+            'bio' => 'required|min:10|max:500',
+            'image' => 'required|image'
         ]);
 
         // Store data
         $profile = new Profile;
 
         $profile->name = $request->name;
-        // $profile->image = $request->image;
+        $profile->party = $request->party;
         $profile->bio = $request->bio;
 
         // Store our image
@@ -115,15 +116,16 @@ class ProfileController extends Controller
         // Validate data
         $this->validate($request, [
             'name' => 'required|max:50',
-            'image' => 'sometimes',
-            'bio' => 'required|min:10|max:500'
+            'party' => 'required|max:50',
+            'bio' => 'required|min:10|max:500',
+            'image' => 'sometimes'
         ]);
 
         // Store data
         $profile = Profile::find($id);
 
         $profile->name = $request->input('name');
-        // $profile->image = $request->input('image');
+        $profile->party = $request->input('party');
         $profile->bio = $request->input('bio');
 
         // Store our image
